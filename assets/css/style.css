@@ -1,0 +1,103 @@
+
+body {
+    background-image: url(../images/background.gif);
+    background-repeat: repeat;
+    background-color: #c2c2c2;
+     font-family: 'Mali', cursive,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     font-weight: 300;
+}
+
+
+.main-content {
+    background-image: url(../images/contentbackground.jpg);
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+   
+    border: 2px solid #dddddd;
+    border-radius: 4px;
+    max-height: 800px;
+    height: 100%;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;  
+  
+}
+
+.main-content:focus { 
+    outline:none; 
+    border: 1px solid #4676b1; 
+     /* create a BIG glow */
+     box-shadow: 0px 0px 14px #4195fc; 
+     -moz-box-shadow: 0px 0px 14px #4195fc;
+     -webkit-box-shadow: 0px 0px 14px #4195fc;
+}
+
+.logoGame {
+    margin: 0 auto; 
+    margin-left: 100px;
+    width: 450px;
+}
+
+#video-background {
+    /*  making the video fullscreen  */
+      position: fixed;
+      right: 0; 
+      bottom: 0;
+      min-width: 100%; 
+      min-height: 100%;
+      width: auto; 
+      height: auto;
+      z-index: -100;
+    }
+
+    .Gtitle {
+        text-align: center;
+        font-weight: 800;
+    }
+
+    .GameWord {
+        text-align: center;
+        font-weight: 600;
+        font-size: 50px;
+    }
+
+    .n-wins{
+        text-align: right;
+        font-size: 20px;
+        color: rgb(168, 13, 52);
+        margin-right: 20px;
+    }
+
+    .lives {
+        text-align: center;
+        font-size: 20px;
+        color: #029CB4;
+        margin-right: 20px;
+        font-weight: 800;
+        
+    }
+
+    .n-lives{
+        font-weight: bold;
+        color: #D08B00;
+        text-align: center;
+    }
+
+    .loser {
+        font-size: 25px;
+        color: #880824;
+        text-align: center;
+    }
+
+    .win {
+        font-weight: bold;
+        font-size: 30px;
+        color: #86C844;
+        text-align: center;
+    }
+.guessed {
+    font-size: 16px;
+    font-weight: bold;
+    color: #194552;
+
+}

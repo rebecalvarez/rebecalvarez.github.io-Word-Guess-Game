@@ -4,32 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <script type="text/javascript" src="assets/js/game.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Mali" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+<script type="text/javascript" src="assets/js/game.js"></script>
     <title>Christmas' Words Guess Game</title>
 </head>
 <body onload="start()">
-    <h1> Christmas Word Guessing Game </h1>
-    <h3> Type a Letter to Guess the Word </h3>
-    <p> WINS </p>
-    <div id="wins"></div>
+    <!-- Music Background controls -->
+     <iframe src="assets/audio/lena-orsa__a-christmas-tale.mp3" allow="autoplay" id="audio" style="display:none"></iframe> 
+    <iframe src="https://ia802709.us.archive.org/25/items/snowflakes_201412/snowflakes.mp4" allow="autoplay" id="video-background" style="display:none"></iframe>
+    
+    <!-- video Background -->
+    
+    <video autoplay loop id="video-background" muted plays-inline>
+            <source src="https://ia802709.us.archive.org/25/items/snowflakes_201412/snowflakes.mp4" type="video/mp4">
+          </video>
+    <div class="container main-content">
+
+    <div> <img class="logoGame" src="assets/images/CGGame-logo.png" alt=""></div>
+    
+    
+    <p class="n-wins"> WINS : <span id = "wins"></span> </p>
 
 
-    <div id="fullWord"></div>
+    <h3 class="Gtitle"> Type a Letter to Guess the Word </h3>
+ 
+   
+
+    <div id="winResult" class="win"></div>
+
+    <div class='loser' id= 'loserresult'></div>
+
+    <div class="GameWord" id="fullWord"></div>
+
+    
+    <br>
+    <p class="guessed"><i class="far fa-snowflake"></i> Letters Guessed <i class="far fa-snowflake"></i> <br> <span id="uniqLetters"></span></p>
+    
+
+<br>
+<br>
+
+    <p class="lives"> ATTEMPTS LEFT <br> <span class = 'n-lives' id = "lives"></span> </p>
+    
+
+    
 
 
-    <p>Letters Guessed</p>
-    <div id="uniqLetters"></div>
+<br>
+<br>
+<br>
+<br>
 
-    <p>Attempts left</p>
-    <div id="lives"></div>
+ <!-- Music Background controls -->
+ <audio autoplay loop>
+        
+    <source src="assets/audio/lena-orsa__a-christmas-tale.mp3" type="audio/mp3">
+    <source src="assets/audio/lena-orsa__a-christmas-tale.ogg" type="audio/ogg">
+    Your browser does not support the audio element.
+  </audio>  
 
-    <div id=loserresult></div>
-
-
-
-
-
+</div>
     
 </body>
 </html>

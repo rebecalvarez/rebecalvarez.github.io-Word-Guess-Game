@@ -33,6 +33,7 @@ var uniqLetters = [];
 var fullWord; // array converted to string
 var uniqWrong; // takes any duplicated letter off
 var remainingLetters;
+var gameover= false;
 console.log(lives);
 console.log(uniqLetters);
 
@@ -133,86 +134,53 @@ function start() {
     console.log(remainingLetters);
     console.log(lives);
 
-    
+    if (userGuess === "y" && gameover) {
+      //letters guessed starting from 0
+      answerArray = [];
+      uniqWrong = [];
+      fullWord = "";
+      word = words[Math.floor(Math.random() * words.length)];
+      remainingLetters = word.length;
+      lives = 5;  //how many lives do I have
+      winResult = "";
+      keysTypedArray = []; //this is an array of typed letters
+     console.log('wins: ' + wins);
 
-    // Loser case
+      rightLetters = [];
+      wrongLetters = [];
+      allLetters = []; // all the letters typed
+      uniqLetters = [];
+      loserresult = "";
+      gameover = false;
+         document.getElementById("winResult").innerHTML = '';
+         document.getElementById("loserresult").innerHTML = '';
 
+      document.getElementById("uniqLetters").innerHTML = uniqLetters;
+      start()
+    }
+// Loser case
     if (lives <= 0) {
+      gameover = true;
       var loserresult =
         "<h1>You Lose!</h1>" +
         "<h2>Don't be like Mr. Scrooge! </h2>" +  "<p>Would you like to play again? <br> <strong>Type 'y' or 'n'</strong></p>";
       document.getElementById("loserresult").innerHTML = loserresult;
-
-      if (userGuess === "y") {
-        //letters guessed starting from 0
-        answerArray = [];
-        uniqWrong = [];
-        fullWord = "";
-        word = words[Math.floor(Math.random() * words.length)];
-        remainingLetters = word.length;
-        lives = 5;  //how many lives do I have
-
-        userGuess; //key guess by user
-        keysTypedArray = []; //this is an array of typed letters
-
-        rightLetters = [];
-        wrongLetters = [];
-        allLetters = []; // all the letters typed
-        uniqLetters = [];
-        loserresult = "";
-        
-        document.getElementById("loserresult").innerHTML = loserresult;
-        document.getElementById("uniqLetters").innerHTML = uniqLetters;
-        start()
-
-
-      }
-
     }
 
-
-    //Winner case
-
     if (remainingLetters <= 0) {
+      gameover= true;
        wins++;
       document.getElementById("wins").innerHTML = wins;
       
-      // var winResult =
-      //   "<h1>Merry Christmas!! You WON!</h1>" +
-      //   "<h3>Would you like to play again? <br> Type 'y' or 'n'</h3>";
+       var winResult =
+       "<h1>Merry Christmas!! You WON!</h1>" +
+       "<h3>Would you like to play again? <br> Type 'y' or 'n'</h3>";
         
-      // document.getElementById("winResult").innerHTML = winResult;
+      document.getElementById("winResult").innerHTML = winResult;
       
-      // console.log('wins: ' + wins);
-      // if (userGuess === "y") {
-      //   remainingLetters = 0; //added
-        answerArray = [];
-        uniqWrong = [];
-        winResult = "";
-        fullWord = "";
-        document.getElementById("winResult").innerHTML = winResult;
-        console.log('wins: ' + wins);
-
-        //creates random word
-        word = words[Math.floor(Math.random() * words.length)];
-        remainingLetters = word.length;
-        lives = 5;  //how many lives do I have
-
-        userGuess; //key guess by user
-        keysTypedArray = []; //this is an array of typed letters
-        rightLetters = [];
-        wrongLetters = [];
-        allLetters = []; // all the letters typed
-        uniqLetters = [];
-
-        document.getElementById("uniqLetters").innerHTML = uniqLetters;
-        start()
-        
-     // }
-
-
-
+       console.log('wins: ' + wins);
     }
+
 
   };
 };

@@ -1,6 +1,6 @@
 
 body {
-    background-image: url(../images/background.gif);
+    background-color: #029CB4;
     background-repeat: repeat;
     background-color: #c2c2c2;
      font-family: 'Mali', cursive,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -9,7 +9,7 @@ body {
 
 
 .main-content {
-    background: #029CB4;
+    background-image: url(../images/contentbackground.jpg);
     max-width: 700px;
     width: 100%;
     margin: 0 auto;
